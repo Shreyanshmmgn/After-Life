@@ -7,7 +7,7 @@ public class LimbTesting : MonoBehaviour {
     private List<LimbPartTesting> parts = new List<LimbPartTesting> ();
     public Transform root;
     public Vector2 resetPosition;
-    public float force = 100;
+    public float force = 50;
     [Range (0f, 1f)]
     public float ratio = 0.9f;
 
