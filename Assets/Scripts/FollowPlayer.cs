@@ -17,7 +17,8 @@ public class FollowPlayer : MonoBehaviour {
         
         positionPlayer.x =  Mathf.Clamp (positionPlayer.x, minX.position.x, maxX.position.x);
         positionPlayer.y = Mathf.Clamp (positionPlayer.y, minY.position.y, maxY.position.y);
+        positionPlayer.z= -10;
         transform.position = positionPlayer;
-
+        // Debug.Log(positionPlayer);
     }
 }
