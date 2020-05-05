@@ -7,13 +7,24 @@ public class GameManager : MonoBehaviour {
     private AudioSource audioi;
     [SerializeField]
     private GameObject panel;
-    void Start () {
 
+    [SerializeField]
+    private GameObject player;
+
+    [SerializeField]
+    private GameObject hiddenPlatform;
+    Animator animator;
+
+    // public GameObject[] checkPoint;
+    Transform currentCheckPoint;
+
+    public void UpdateCheckPoint (Transform checkPoint) {
+        this.currentCheckPoint = checkPoint;
     }
 
-    // Update is called once per frame
-    void Update () {
-
+    public void GoToLastCheckPoint () {
+        player.transform.position = currentCheckPoint.position;
+        player.SetActive (true);
     }
 
     public void SceneChanger () {
@@ -24,13 +35,16 @@ public class GameManager : MonoBehaviour {
     }
     public void OnOfAudio (bool onoff) {
         if (onoff) { audioi.Play (); } else {
-            audioi.Stop ();
-
+            // audioi.Stop ();
+            audioi.Pause ();
         }
     }
     public void OnOffPanel (bool onoff) {
         panel.SetActive (onoff);
     }
-    private void OnTriggerEnter2D(Collider2D other) {
+
+    public void hiddenPlatformAction (GameObject obj) {
+        animator = obj.GetComponent<Animator> ();
+        animator.SetBool ("Platform", true);
     }
 }

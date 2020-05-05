@@ -8,6 +8,9 @@ TagManager:
   - Lava
   - LowerSpikes
   - UpperSpikes
+  - Eye
+  - Checkpoint
+  - HiddenPlatform
   layers:
   - Default
   - TransparentFX

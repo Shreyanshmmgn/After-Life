@@ -39,7 +39,7 @@ public class stickManController : MonoBehaviour {
         if (Input.GetKeyDown (KeyCode.Space)) {
             // hip.AddForce (jumpForce * Vector2.up, ForceMode2D.Impulse);
             Jump();
-            Debug.Log ("Jumping");
+            // Debug.Log ("Jumping");
         }
     }
     void RotateTo (Rigidbody2D rigidbody, float angle, float force) {
