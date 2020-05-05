@@ -19,9 +19,8 @@ public class GameManager : MonoBehaviour {
     public void SceneChanger () {
         SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1, LoadSceneMode.Single);
     }
-    public void Quitt()
-    {
-        Application.Quit();
+    public void Quitt () {
+        Application.Quit ();
     }
     public void OnOfAudio (bool onoff) {
         if (onoff) { audioi.Play (); } else {
@@ -29,8 +28,9 @@ public class GameManager : MonoBehaviour {
 
         }
     }
-
     public void OnOffPanel (bool onoff) {
         panel.SetActive (onoff);
+    }
+    private void OnTriggerEnter2D(Collider2D other) {
     }
 }

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Lava
+  - LowerSpikes
+  - UpperSpikes
   layers:
   - Default
   - TransparentFX
