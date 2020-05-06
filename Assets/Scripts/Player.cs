@@ -44,6 +44,9 @@ public class Player : MonoBehaviour {
         manager.OnOfAudio (false);
         manager.OnOffPanel (true);
     }
+    public void PlayerOnOff () {
+        player.SetActive (false);
+    }
     private void OnTriggerEnter2D (Collider2D other) {
         if (other.CompareTag ("Checkpoint")) {
             manager.UpdateCheckPoint (other.gameObject.transform);

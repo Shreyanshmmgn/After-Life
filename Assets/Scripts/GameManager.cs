@@ -6,20 +6,23 @@ public class GameManager : MonoBehaviour {
     [SerializeField]
     private AudioSource audioi;
     [SerializeField]
-    private GameObject panel, puzzleText, restart;
+    private GameObject panel, restart, puzzleScript;
 
     [SerializeField]
     private GameObject player;
 
     // [SerializeField]
     // private GameObject hiddenPlatform;
-    Animator animator, animatorPuzzle;
+
+    Animator animator;
+    [SerializeField]
+    Animator animatorPuzzleCanvas;
 
     // public GameObject[] checkPoint;
     Transform currentCheckPoint;
 
-    private void Start() {
-        Invoke("RestartButton" , 100);
+    private void Start () {
+        Invoke ("RestartButton", 100);
     }
 
     public void UpdateCheckPoint (Transform checkPoint) {
@@ -65,10 +68,12 @@ public class GameManager : MonoBehaviour {
     }
 
     public void ActivatePuzzle () {
-        animatorPuzzle.SetInteger ("Story", 1);
+        animatorPuzzleCanvas.SetInteger ("Story", 1);
+        puzzleScript.SetActive (true);
+
     }
 
     public void RestartButton () {
-        restart.SetActive(true);
+        restart.SetActive (true);
     }
 }
