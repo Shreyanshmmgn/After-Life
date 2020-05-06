@@ -998,7 +998,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "How did the women die? Answers is the\n key!!\n\nType your answer\n\n-Devil"
+  m_Text: "How did your lovely wife dieed? Answer is the\n key!!\n\nType your answer\n\n-Devil"
 --- !u!222 &471281391
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1104,7 +1104,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 207.3, y: -0.9, z: -10}
+  m_LocalPosition: {x: -36.9, y: -3.82, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1117,7 +1117,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c29acd985bacfcf4da27513515467858, type: 3}
@@ -4464,9 +4464,9 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: A room where there are no windows, no doors, no tables and is almost empty
-    expect there is just a puddle of water. They found a dead woman who obviously
-    hung herself from the ceiling, but they are not able to figure out how this had
-    happened.
+    expect there is just a puddle of water. They found a dead woman you know her umm..
+    your wife  who hung herself from the ceiling due to your affair, but you still
+    are not able to figure out how this had happened.
 --- !u!222 &1819002943
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6324,12 +6324,12 @@ PrefabInstance:
     - target: {fileID: 5001096057814564374, guid: 0a3afa5d0013f974fb62bdc1d3630e89,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 161.8
+      value: -41.99
       objectReference: {fileID: 0}
     - target: {fileID: 5001096057814564374, guid: 0a3afa5d0013f974fb62bdc1d3630e89,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.77
+      value: 10.48
       objectReference: {fileID: 0}
     - target: {fileID: 5001096057814564374, guid: 0a3afa5d0013f974fb62bdc1d3630e89,
         type: 3}

@@ -55,6 +55,10 @@ public class Player : MonoBehaviour {
         } else if (other.CompareTag ("Puzzle")) {
             manager.ActivatePuzzle ();
         }
+        else if(other.CompareTag("Heaven"))
+        {
+            manager.SceneChanger();
+        }
     }
 
     private void Update () {

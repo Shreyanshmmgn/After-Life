@@ -76,4 +76,8 @@ public class GameManager : MonoBehaviour {
     public void RestartButton () {
         restart.SetActive (true);
     }
+    public void GoToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }
