@@ -7,6 +7,7 @@ public class Player : MonoBehaviour {
     private GameManager manager;
     [SerializeField]
     private GameObject player;
+    [SerializeField]
     private Rigidbody2D rb;
 
     [SerializeField]
@@ -16,13 +17,14 @@ public class Player : MonoBehaviour {
     // float jumpForce;
     private void Start () {
         // jumpForce = transform.GetComponent<stickManController> ().jumpForce;
-        rb = GetComponent<Rigidbody2D> ();
+        // rb = GetComponent<Rigidbody2D> ();
     }
 
     private void OnCollisionEnter2D (Collision2D other) {
         tagg = other.gameObject.tag;
-        if (tagg == "UpperSpikes") {
+        if (tagg == "UpperSpikes" || tagg == "Lava" || tagg == "LowerSpikes") {
             PlayerDied ();
+            // Debug.Log ("Spikes");
         } else if (tagg == "Eye") {
             Debug.Log ("Eye Got  - " + count);
             if (count == 0) {
@@ -45,12 +47,10 @@ public class Player : MonoBehaviour {
     private void OnTriggerEnter2D (Collider2D other) {
         if (other.CompareTag ("Checkpoint")) {
             manager.UpdateCheckPoint (other.gameObject.transform);
-            Destroy (other.gameObject);
-        } else if (other.CompareTag ("LowerSpikes")) {
-            rb.AddForce (new Vector2 (0, 10), ForceMode2D.Impulse);
-            Debug.Log ("Lower Spike hit--");
-        } else if (other.CompareTag ("Lava")) {
-            PlayerDied ();
+            // Destroy (other.gameObject);
+            other.gameObject.SetActive (false);
+        } else if (other.CompareTag ("Puzzle")) {
+            manager.ActivatePuzzle ();
         }
     }
 
