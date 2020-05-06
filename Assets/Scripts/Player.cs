@@ -22,7 +22,7 @@ public class Player : MonoBehaviour {
 
     private void OnCollisionEnter2D (Collision2D other) {
         tagg = other.gameObject.tag;
-        if (tagg == "UpperSpikes" || tagg == "Lava" || tagg == "LowerSpikes") {
+        if (tagg == "UpperSpikes" || tagg == "LowerSpikes") {
             PlayerDied ();
             // Debug.Log ("Spikes");
         } else if (tagg == "Eye") {
@@ -54,10 +54,10 @@ public class Player : MonoBehaviour {
             other.gameObject.SetActive (false);
         } else if (other.CompareTag ("Puzzle")) {
             manager.ActivatePuzzle ();
-        }
-        else if(other.CompareTag("Heaven"))
-        {
-            manager.SceneChanger();
+        } else if (other.CompareTag ("Heaven")) {
+            manager.SceneChanger ();
+        } else if (other.CompareTag ("Lava")) {
+            PlayerDied ();
         }
     }
 

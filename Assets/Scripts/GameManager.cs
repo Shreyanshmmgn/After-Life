@@ -23,6 +23,10 @@ public class GameManager : MonoBehaviour {
 
     private void Start () {
         Invoke ("RestartButton", 100);
+        if (SceneManager.GetActiveScene ().name == "Main") {
+            animatorPuzzleCanvas.SetInteger ("Story", 2);
+
+        }
     }
 
     public void UpdateCheckPoint (Transform checkPoint) {
@@ -57,14 +61,20 @@ public class GameManager : MonoBehaviour {
 
     public void Restart () {
         // Debug.Log ("Player Position -- Starting" + player.transform.position);
-        // Debug.Log ("Current Checkpoint -- " + currentCheckPoint);
+        Debug.Log ("Current Checkpoint -- " + currentCheckPoint.position.x);
         // player.transform.position = currentCheckPoint.position;
-        // Debug.Log ("Player Position -- " + player.transform.position);
+        Debug.Log ("Player Position -- " + player.transform.position);
         // player.SetActive (true);
         // player.transform.position = new Vector3 (-30, 0, 0);
         // panel.SetActive (false);
         // OnOfAudio (true);
-        SceneManager.LoadScene ("Game Starting");
+        if (currentCheckPoint.position.x > 58) {
+            SceneManager.LoadScene ("Checkpoint2");
+        } else if (currentCheckPoint.position.x > 31 && currentCheckPoint.position.x < 57) {
+            SceneManager.LoadScene ("Checkpoint1");
+        } else {
+            SceneManager.LoadScene ("Checkpoint0");
+        }
     }
 
     public void ActivatePuzzle () {
@@ -76,8 +86,10 @@ public class GameManager : MonoBehaviour {
     public void RestartButton () {
         restart.SetActive (true);
     }
-    public void GoToMenu()
-    {
-        SceneManager.LoadScene("Menu");
+    public void GoToMenu () {
+        SceneManager.LoadScene ("Menu");
     }
+    // public void GameWon () {
+    //     SceneManager.LoadScene("End");
+    // }
 }
